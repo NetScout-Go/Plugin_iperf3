@@ -1,4 +1,5 @@
 # NetScout Plugin: iPerf3 Throughput Test
+
 iPerf3 Server
 Port
 Test Duration
@@ -30,7 +31,7 @@ parallel
 
 Or use the NetScout-Go plugin manager to install it:
 
-```
+```go
 // In your NetScout application
 pluginLoader.InstallPlugin("https://github.com/NetScout-Go/Plugin_iperf3")
 ```
