@@ -1,67 +1,77 @@
 {
-  "id": "iperf3",
-  "name": "iPerf3 Throughput Test",
+  "author": "NetScout-Go",
+  "category": "Performance",
   "description": "Test network throughput with iPerf3 between this device and a remote iPerf3 server",
   "icon": "speed",
-  "category": "Performance",
+  "id": "iperf3",
+  "license": "MIT",
+  "name": "iPerf3 Throughput Test",
   "parameters": [
     {
+      "default": "",
+      "description": "IP or hostname of the iPerf3 server",
       "id": "server",
       "name": "iPerf3 Server",
-      "description": "IP or hostname of the iPerf3 server",
-      "type": "string",
       "required": true,
-      "default": ""
+      "type": "string"
     },
     {
+      "default": 5201,
+      "description": "iPerf3 server port",
       "id": "port",
       "name": "Port",
-      "description": "iPerf3 server port",
-      "type": "number",
       "required": false,
-      "default": 5201
+      "type": "number"
     },
     {
-      "id": "duration",
-      "name": "Test Duration",
-      "description": "Duration of test in seconds",
-      "type": "number",
-      "required": false,
       "default": 10,
-      "min": 1,
+      "description": "Duration of test in seconds",
+      "id": "duration",
       "max": 60,
-      "step": 1
+      "min": 1,
+      "name": "Test Duration",
+      "required": false,
+      "step": 1,
+      "type": "number"
     },
     {
+      "default": "tcp",
+      "description": "Protocol to use for the test",
       "id": "protocol",
       "name": "Protocol",
-      "description": "Protocol to use for the test",
-      "type": "select",
-      "required": false,
-      "default": "tcp",
       "options": [
-        {"value": "tcp", "label": "TCP"},
-        {"value": "udp", "label": "UDP"}
-      ]
+        {
+          "label": "TCP",
+          "value": "tcp"
+        },
+        {
+          "label": "UDP",
+          "value": "udp"
+        }
+      ],
+      "required": false,
+      "type": "select"
     },
     {
+      "default": false,
+      "description": "Run in reverse mode (server sends, client receives)",
       "id": "reverse",
       "name": "Reverse Mode",
-      "description": "Run in reverse mode (server sends, client receives)",
-      "type": "boolean",
       "required": false,
-      "default": false
+      "type": "boolean"
     },
     {
-      "id": "parallel",
-      "name": "Parallel Connections",
-      "description": "Number of parallel connections to use",
-      "type": "number",
-      "required": false,
       "default": 1,
-      "min": 1,
+      "description": "Number of parallel connections to use",
+      "id": "parallel",
       "max": 10,
-      "step": 1
+      "min": 1,
+      "name": "Parallel Connections",
+      "required": false,
+      "step": 1,
+      "type": "number"
     }
-  ]
+  ],
+  "repository": "https://github.com/NetScout-Go/Plugin_iperf3",
+  "version": "1.0.0"
 }
